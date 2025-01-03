@@ -18,7 +18,6 @@ function createDreamTeam(members) {
       return false;  
   }
   const noFalsyMembers = members.filter((item) => typeof item === 'string');
-  console.log(noFalsyMembers);
   const trimMembers = noFalsyMembers.map((item) => item.trim().toUpperCase());
   return trimMembers.sort().reduce((acc, item) => {
       acc += item.slice(0, 1);
